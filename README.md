@@ -75,7 +75,8 @@ Running the Backend
    npm start
 6. The frontend will run at http://localhost:3000.
 
-Folder Structure
+## Folder Structure
+
 mern-crash-course/
 ├── backend/
 │ ├── config/ # Database configuration
@@ -88,7 +89,7 @@ mern-crash-course/
 ├── .gitignore # Ignored files and directories
 └── README.md # Project documentation
 
-Scripts
+## Scripts
 
 Backend
 npm start: Start the backend server.
@@ -112,9 +113,11 @@ Frontend (if applicable):
 React.js
 Axios (for API requests)
 
-License
+## License
+
 This project is licensed under the MIT License. Feel free to use and modify it as needed.
 
-Acknowledgments
+## Acknowledgments
+
 This project was created as part of a MERN crash course.
 Special thanks to the course instructor and contributors.
