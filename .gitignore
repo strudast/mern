@@ -1,0 +1,32 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv
+.env
+.env.* # in case you use multiple env files like .env.local
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# React (frontend build)
+build/
+dist/
+
+# Coverage reports
+coverage/
+
+# IDEs
+.vscode/
+.idea/
+
+# Optional: if you use parcel, vite, etc.
+.cache/
