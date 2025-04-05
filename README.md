@@ -1,4 +1,4 @@
-# MERN Crash Course Project
+# MERN eshop showcase Project
 
 This is a full-stack MERN (MongoDB, Express, React, Node.js) application built as part of a crash course. The project demonstrates how to create a backend API with Node.js and Express, connect to a MongoDB database, and integrate it with a React frontend.
 
