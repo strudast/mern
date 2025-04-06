@@ -35,7 +35,9 @@ export const updatedProduct = async (req, res) => {
   const product = req.body; //user will send this data
 
   if (mongoose.Types.ObjectId.isValid(id) === false) {
-    return res.status(400).json({ success: false, message: "Invalid ID" });
+    return res
+      .status(404)
+      .json({ success: false, message: "Invalid product ID" });
   } //check if the id is valid
   //if not, return error
   try {
@@ -51,6 +53,11 @@ export const updatedProduct = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
   const { id } = req.params;
+  if (mongoose.Types.ObjectId.isValid(id) === false) {
+    return res
+      .status(404)
+      .json({ success: false, message: "Invalid productID" });
+  } //check if the id is valid
   try {
     await Product.findByIdAndDelete(id);
     res.status(200).json({ success: true, message: "Product deleted" });
