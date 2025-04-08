@@ -1,24 +1,52 @@
 {
   "compilerOptions": {
+    // Specifies the location where TypeScript stores incremental build information.
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+
+    // Sets the JavaScript language version for emitted JavaScript and features.
     "target": "ES2022",
+
+    // Specifies the library files to include in the compilation, here targeting ES2023 features.
     "lib": ["ES2023"],
+
+    // Determines the module system for the project, using ESNext for modern JavaScript modules.
     "module": "ESNext",
+
+    // Skips type checking of declaration files, improving build performance.
     "skipLibCheck": true,
 
     /* Bundler mode */
+    // Specifies how module resolution works, using "bundler" for tools like Vite.
     "moduleResolution": "bundler",
+
+    // Allows importing TypeScript files with explicit extensions (e.g., `.ts`).
     "allowImportingTsExtensions": true,
+
+    // Ensures each file is treated as a separate module, required for bundlers.
     "isolatedModules": true,
+
+    // Forces explicit module detection, avoiding ambiguities in module type.
     "moduleDetection": "force",
+
+    // Prevents emitting compiled JavaScript files, useful for bundler-based workflows.
     "noEmit": true,
 
     /* Linting */
+    // Enables strict type-checking options for better type safety.
     "strict": true,
+
+    // Reports errors for unused local variables, improving code cleanliness.
     "noUnusedLocals": true,
+
+    // Reports errors for unused function parameters, ensuring cleaner APIs.
     "noUnusedParameters": true,
+
+    // Prevents fallthrough in switch statements, reducing potential bugs.
     "noFallthroughCasesInSwitch": true,
+
+    // Flags imports with potential side effects that are not explicitly used.
     "noUncheckedSideEffectImports": true
   },
+  // Specifies the files to include in the compilation, here targeting the Vite configuration file.
   "include": ["vite.config.ts"]
 }

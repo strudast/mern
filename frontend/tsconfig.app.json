@@ -1,38 +1,38 @@
 {
   "compilerOptions": {
     /* ✅ Language & Environment */
-    "target": "ESNext", // Use latest JS features
-    "lib": ["ESNext", "DOM", "DOM.Iterable"], // DOM for browser support, ESNext for latest
+    "target": "ESNext", // Specifies the target JavaScript version. "ESNext" enables the latest JS features.
+    "lib": ["ESNext", "DOM", "DOM.Iterable"], // Includes type definitions for ESNext, browser DOM APIs, and iterable DOM objects.
 
     /* ✅ Module Resolution */
-    "module": "ESNext",
-    "moduleResolution": "bundler", // Vite-specific, Chakra v3 expects this
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "noEmit": true, // Don't emit JS files, Vite handles that
-    "moduleDetection": "force",
+    "module": "ESNext", // Specifies the module system. "ESNext" is used for modern JavaScript modules.
+    "moduleResolution": "bundler", // Optimized for bundlers like Vite. Chakra UI v3 requires this setting.
+    "allowImportingTsExtensions": true, // Allows importing TypeScript files with extensions (e.g., `.ts`, `.tsx`).
+    "isolatedModules": true, // Ensures each file is treated as a separate module, required for tools like Vite.
+    "noEmit": true, // Prevents TypeScript from emitting JavaScript files. Vite handles the build process.
+    "moduleDetection": "force", // Forces explicit module usage, avoiding ambiguities in module detection.
 
     /* ✅ JSX & React */
-    "jsx": "react-jsx", // For React 17+ JSX runtime
+    "jsx": "react-jsx", // Enables the new JSX runtime introduced in React 17+ for better performance and simplicity.
 
     /* ✅ Paths (Optional: cleaner imports) */
-    "baseUrl": ".",
+    "baseUrl": ".", // Sets the base directory for resolving non-relative module imports.
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"] // Maps `@/` to the `src/` directory for cleaner and shorter import paths.
     },
 
     /* ✅ Linting & Type Safety */
-    "strict": true,
-    "skipLibCheck": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noUncheckedSideEffectImports": true,
+    "strict": true, // Enables all strict type-checking options for better type safety.
+    "skipLibCheck": true, // Skips type checking of declaration files to speed up builds.
+    "noUnusedLocals": true, // Reports errors for unused local variables to keep the code clean.
+    "noUnusedParameters": true, // Reports errors for unused function parameters to avoid unnecessary code.
+    "noFallthroughCasesInSwitch": true, // Prevents unintentional fallthrough in switch statements.
+    "noUncheckedIndexedAccess": true, // Ensures array and object accesses are type-checked for safety.
+    "noUncheckedSideEffectImports": true, // Warns about imports with potential side effects that aren't explicitly used.
 
     /* ✅ Caching (Optional: faster builds) */
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo" // Specifies the location for incremental build cache to speed up builds.
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src"], // Includes the `src` directory for TypeScript compilation.
+  "exclude": ["node_modules", "dist"] // Excludes `node_modules` and `dist` directories to avoid unnecessary processing.
 }
