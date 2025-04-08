@@ -10,11 +10,10 @@ import { PlusSquareIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
-import { useProductStore } from "../store/product";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { products } = useProductStore();
+
   return (
     <Container maxW={"1140px"} px={4}>
       <Flex
